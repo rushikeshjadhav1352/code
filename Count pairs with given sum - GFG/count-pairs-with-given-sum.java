@@ -32,7 +32,7 @@ public class GFG {
 class Solution {
     int getPairsCount(int[] arr, int n, int k) {
         // code here
-        HashMap<Integer,Integer> ans=new HashMap<Integer,Integer>();
+         HashMap<Integer,Integer> ans=new HashMap<Integer,Integer>();
         int count=0;
         for(int i=0;i<n;i++){
          if(ans.containsKey(k-arr[i])){
