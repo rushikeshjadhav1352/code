@@ -38,9 +38,7 @@ class Solution{
         long currsum=0;
         for(int i=0;i<arr.length;i++){
             currsum+=arr[i];
-            if(currsum>sum){
-                sum=currsum;
-            }
+            sum=Math.max(sum,currsum);
             if(currsum<=0){
                 currsum=0;
             }
