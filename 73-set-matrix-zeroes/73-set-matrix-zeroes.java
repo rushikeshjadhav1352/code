@@ -37,16 +37,17 @@ class Solution {
                 }
             }
         }
-        if(y==0){
-            for(int i=0;i<m;i++){
-                matrix[i][0]=0;
-            }
-        }
          if(x==0){
             for(int i=0;i<n;i++){
                 matrix[0][i]=0;
             }
         }
+        if(y==0){
+            for(int i=0;i<m;i++){
+                matrix[i][0]=0;
+            }
+        }
+        
          
     }
 }
