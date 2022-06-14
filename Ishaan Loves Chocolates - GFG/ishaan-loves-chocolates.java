@@ -54,11 +54,14 @@ class Complete{
     // Function for finding maximum and value pair
     public static int chocolates (int arr[], int n) {
         //Complete the function
-        int ans=Integer.MAX_VALUE;
-        for(int i=0;i<arr.length;i++){
-            ans=Math.min(ans,arr[i]);
+        return ans(arr,Integer.MAX_VALUE,0);
+    }
+    public static int ans(int a[],int an,int index){
+        if(a.length==index){
+            return an;
         }
-        return ans;
+       an=Math.min(a[index],an);
+        return ans(a,an,index+1);
     }
     
     
