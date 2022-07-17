@@ -24,8 +24,8 @@ class Solution {
         ans.add(root.val);
         ans.addAll(preorderTraversal(root.left));
         ans.addAll(preorderTraversal(root.right));
-        List<Integer> a=new ArrayList<>();
-        a.addAll(ans);
-        return a;
+        
+        
+        return ans;
     }
 }
