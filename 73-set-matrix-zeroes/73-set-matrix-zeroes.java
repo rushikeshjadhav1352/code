@@ -1,53 +1,44 @@
 class Solution {
-    public void setZeroes(int[][] matrix) {
-        int m=matrix.length;
-        int n=matrix[0].length;
-        int count=0;
-        int x=1;
-            int y=1;
-        for(int i=0;i<m;i++){
-            if(matrix[i][0]==0){
-                y=0;
-            }
-        }
-        for(int j=0;j<n;j++){
-            if(matrix[0][j]==0){
-                x=0;
-            }
-        }
-        for(int i=1;i<m;i++){
-            for(int j=1;j<n;j++){
-                if(matrix[i][j]==0){
-                    matrix[i][0]=0;
-                    matrix[0][j]=0;
-                }
-            }
-        }
-       for(int i=1;i<matrix.length;i++){
-            if(matrix[i][0]==0){
-                for(int j=0;j<matrix[i].length;j++){
-                    matrix[i][j]=0;
-                }
-            }
-        }
-        for(int i=1;i<n;i++){
-            if(matrix[0][i]==0){
-                for(int j=0;j<m;j++){
-                    matrix[j][i]=0;
-                }
-            }
-        }
-         if(x==0){
-            for(int i=0;i<n;i++){
-                matrix[0][i]=0;
-            }
-        }
-        if(y==0){
-            for(int i=0;i<m;i++){
-                matrix[i][0]=0;
-            }
-        }
-        
-         
-    }
+    public void setZeroes(int[][] arr) {
+      	int mat1[]=new int[arr.length];
+		int mat2[]=new int[arr[0].length];
+		Arrays.fill(mat1,1);
+		Arrays.fill(mat2,1);
+		for(int i=0;i<arr.length;i++){
+		    for(int j=0;j<arr[0].length;j++){
+		       if(arr[i][j]==0){
+		           
+		           mat1[i]=0;
+		           mat2[j]=0;
+		       }
+		    }
+		   
+		}
+		 //System.out.println(Arrays.toString(mat1));
+		for(int i=0;i<mat1.length;i++){
+		    if(mat1[i]==0){
+		        for(int j=0;j<arr[0].length;j++){
+		            arr[i][j]=0;
+		        }
+		    }
+		}
+		for(int i=0;i<mat2.length;i++){
+		    if(mat2[i]==0){
+		        for(int j=0;j<arr.length;j++){
+		            arr[j][i]=0;
+		        }
+		    }
+		}
+	/*	for(int i=0;i<arr.length;i++){
+		    
+		    for(int j=0;j<arr[0].length;j++){
+		        System.out.print(arr[i][j]+" ");
+		    }
+		   System.out.println();
+		}
+		*/
+	}
 }
+  
+        
+        
